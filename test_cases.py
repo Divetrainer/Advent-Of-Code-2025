@@ -1,0 +1,2 @@
+file_path = "/home/ipohl/workspace/github.com/Divetrainer/Advent_of_Code/Advent-Of-Code-2025/test_cases/day1_input"
+test_case = "/home/ipohl/workspace/github.com/Divetrainer/Advent_of_Code/Advent-Of-Code-2025/test_cases/day1_test"

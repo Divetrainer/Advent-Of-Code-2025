@@ -1,6 +1,4 @@
-
-file_path = "/home/ipohl/workspace/github.com/Divetrainer/Advent_of_Code/day1_input"
-test_case = "/home/ipohl/workspace/github.com/Divetrainer/Advent_of_Code/day1_test"
+from test_cases import file_path, test_case
 
 def instructions(file_path):
     with open(file_path) as f:
