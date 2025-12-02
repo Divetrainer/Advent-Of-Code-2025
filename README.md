@@ -2,7 +2,8 @@
 Source code for my advent of code solves
 
 Might change a language here and there, but most if not all solutions will be written in Python!
-<p>[![Python](https://skillicons.dev/icons?i=python)](https://skillicons.dev)</p>
+
+[![Python](https://skillicons.dev/icons?i=python)](https://skillicons.dev)
 
 - [x] Day 1 - Complete!
 - [] Day 2 - In progress
