@@ -11,8 +11,8 @@ sku_addition = 0
 
 for input in puzzle_input:
     hi_lo_options = input.split("-")
-    low_option = int(hi_lo_options[0])
-    high_option = int(hi_lo_options[1])
-    for i in range(low_option, high_option+1):
-        print(i)
-        
+    low_range = int(hi_lo_options[0])
+    high_range = int(hi_lo_options[1])
+    for num in range(low_range, high_range+1):
+        if num == 0:
+            pass
