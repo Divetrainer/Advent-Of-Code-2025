@@ -6,17 +6,22 @@ def instructions(file_path):
         file_contents = f.read()
     return file_contents
 
-def dupe_check(input_str):
-    for i in range(len(input_str)):
-        if i == len(input_str)-1:
-            return False
-        elif input_str[i] == input_str[i+1]:
-            if dupe_check(input_str[i+1:]):
-                return True
-        elif:
-            if dupe_check(input_str)
-        else:
-            return False
+def dupe_check(input_str, count=0):
+    if count > len(input_str)/2:
+        print("working")
+        return False
+    new_string = input_str[count:]
+    old_string = input_str[:count]
+    #print(new_string)
+    #print(old_string)
+    if not old_string == new_string:
+        print("fail")
+        count +=1
+        dupe_check(input_str, count)
+    return True
+        
+
+print(dupe_check("212121215"))
 
 
 puzzle_input = instructions(test_case).split(",")
@@ -38,11 +43,11 @@ for input in puzzle_input:
             if int(first_half) == int(second_half):
                 sku_addition += num
                 counter = 1
-
+        string_hold = ""
         #if counter == 0 and dupe_check(num_str):
             #print(num)
         #    sku_addition += num
 
-print(dupe_check("12121212"))
 
-print(sku_addition)
+
+#print(sku_addition)
