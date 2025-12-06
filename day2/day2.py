@@ -1,4 +1,4 @@
-
+import textwrap
 from test_cases import file_path, test_case
 
 def instructions(file_path):
@@ -6,23 +6,23 @@ def instructions(file_path):
         file_contents = f.read()
     return file_contents
 
-def dupe_check(input_str, count=0):
-    if count > len(input_str)/2:
-        print("working")
+def dupe_check(input_str, count=1):
+    if len(input_str) % count:
         return False
-    new_string = input_str[count:]
-    old_string = input_str[:count]
-    #print(new_string)
-    #print(old_string)
-    if not old_string == new_string:
-        print("fail")
-        count +=1
-        dupe_check(input_str, count)
-    return True
-        
+    broken_str = textwrap.wrap(input_str, count)
+    for str in broken_str:
+        print(str)
+        if str != broken_str[count]:
+            dupe_check(input_str, count+1)
+    else:
+        return True
 
-print(dupe_check("212121215"))
+    
+    
+    
 
+if dupe_check("2222222223"):
+    print("pass")
 
 puzzle_input = instructions(test_case).split(",")
 sku_addition = 0
@@ -30,7 +30,7 @@ sku_addition = 0
 
 for input in puzzle_input:
     hi_lo_options = input.split("-")
-    low_range = int(hi_lo_options[0])
+    low_range = int(hi_lo_options[0]) 
     high_range = int(hi_lo_options[1])
 
     for num in range(low_range, high_range+1):
@@ -43,9 +43,8 @@ for input in puzzle_input:
             if int(first_half) == int(second_half):
                 sku_addition += num
                 counter = 1
-        string_hold = ""
-        #if counter == 0 and dupe_check(num_str):
-            #print(num)
+        #if dupe_check(num_str):
+        #    print(f"***{num}***")
         #    sku_addition += num
 
 
